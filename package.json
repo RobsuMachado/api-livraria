@@ -1,0 +1,24 @@
+{
+  "name": "api-livraria",
+  "version": "1.0.0",
+  "description": "Uma api REST para gerenciar uma livraria",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "pw2",
+    "api",
+    "rest"
+  ],
+  "author": "Robson Henrique Moura Machado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
