@@ -11,32 +11,40 @@ const Categoria = require('./Categoria');
 const Livro = connection.define(
     'tbl_livro',
     {
-        codigo_livro:{
+        codigo_livro: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        codigo_categoria:{
+        codigo_categoria: {
             type: Sequelize.INTEGER,
             allowNull: false
         },
-        titulo:{
+        titulo: {
             type: Sequelize.STRING,
             allowNull: false
         },
-        preco:{
+        preco: {
             type: Sequelize.STRING,
             allowNull: false
         },
-        imagem_peq:{
+        imagem_peq: {
             type: Sequelize.STRING,
             allowNull: false
         },
-        imagem_grd:{
+        imagem_peq_url: {
             type: Sequelize.STRING,
             allowNull: false
         },
-        detalhes:{
+        imagem_grd: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        imagem_grd_url: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        detalhes: {
             type: Sequelize.TEXT,
             allowNull: false
         }
@@ -56,6 +64,6 @@ Livro.belongsTo(Categoria, {
     sourceKey: 'codigo_categoria'
 });
 
-Livro.sync({force:false});
+Livro.sync({ force: false });
 
 module.exports = Livro;
